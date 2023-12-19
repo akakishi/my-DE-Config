@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 wofi \
     --width 500 \
@@ -6,6 +6,7 @@ wofi \
     --lines 12 \
     --show drun \
     --hide-scroll \
+    --insensitive \
     --define=allow_markup=true \
     --cache-file /dev/null \
     --style ~/.config/my-shared-config/wofi-launch.css \
