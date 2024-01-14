@@ -174,6 +174,16 @@ _G.packer_plugins = {
     path = "/home/ramirods/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/home/ramirods/.local/share/nvim/site/pack/packer/start/vim-airline",
+    url = "https://github.com/vim-airline/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/home/ramirods/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
+    url = "https://github.com/vim-airline/vim-airline-themes"
+  },
   ["vim-be-good"] = {
     loaded = true,
     path = "/home/ramirods/.local/share/nvim/site/pack/packer/start/vim-be-good",
