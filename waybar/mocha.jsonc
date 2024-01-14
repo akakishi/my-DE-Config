@@ -1,0 +1,344 @@
+[{
+
+    //****************
+    // Bar Properties
+    //****************
+
+    "name": "topbar",
+    "layer": "top",
+    "position": "top",
+
+    //****************
+    // Define Modules
+    //****************
+
+    "modules-left": [
+        //"custom/launcher",
+        "sway/workspaces",
+        "custom/scratchpad-indicator",
+        "sway/mode",
+        "sway/window"
+    ],
+    "modules-center": [
+        
+    ],
+    "modules-right": [
+        "custom/media",
+        "mpd",
+        //"custom/audio",
+        //"custom/pacman",
+        //"custom/reboot",
+        "tray",
+        "temperature",
+        "pulseaudio",
+        "network",
+        "custom/weather",
+        "clock",
+        "custom/notification",
+        "custom/powermenu"
+    ],
+
+    //****************
+    // SWAY Modules
+    //****************
+
+    "sway/language": {
+        "format": "{}",
+        "on-click": "swaymsg input type:keyboard xkb_switch_layout next"
+    },
+
+    "sway/mode": {
+        "format": "󰩨 {}"
+    },
+
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+
+    "sway/window": {
+        "format": "{}",
+        //"max-length": 60
+        //"rewrite": {
+            //"(.*) Mozilla Firefox": "Firefox"
+        //}
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        /* "all-outputs": true, */
+        "active-only": true,
+        "format": "{icon}",
+        "format-icons": {
+            /*"1": "[1]",
+            "2": "[2]",
+            "3": "[3]",
+            "4": "[4]",
+            "5": "[5]",
+            "6": "[6]",
+            "7": "[7]",
+            "8": "[8]",
+            "9": "[9]",
+            "10": "[10]",*/
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+
+    //****************
+    // PC Components
+    //****************
+
+    "battery": {
+        "interval": 10,
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+        "format": "{icon} {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "tooltip": true
+    },
+
+    "cpu": {
+        "interval": 1,
+        "format": " {usage}%",
+        "states": {
+            "warning": 85
+        }
+    },
+
+    "disk": {
+        "interval": 30,
+        "format": "󰋊 {percentage_used}%",
+        "path": "/home",
+        "tooltip": true,
+        "tooltip-format": "{used}/{total} => {path} {percentage_used}%"
+    },
+
+    "memory": {
+        "on-click": "kitty btop",
+        "interval": 1,
+        "format": " {percentage}%",
+        "states": {
+            "warning": 85
+        }
+    },
+
+    "network": {
+        "interval": 1,
+        "format-wifi": " {essid}",
+        // "format-ethernet": "󰈀 {ifname} ({ipaddr})",
+        "format-ethernet": "󰈀",
+        "format-linked": " {essid} (No IP)",
+        "format-disconnected": "󰪎 Disconnected",
+        "tooltip": true,
+        "tooltip-format": "{ifname} ({ipaddr})"
+    },
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "critical-threshold": 70,
+        "states": {
+            "warning": 70,
+            "critical": 80
+        },
+        "interval": 5,
+        "format-critical": "!!󰈸{temperatureC}°C!!",
+        "format": " {temperatureC}°C",
+        "on-click": "kitty btop"
+    },
+
+    //****************
+    // Information Apps
+    //****************
+
+    "backlight": {
+        "device": "intel_backlight",
+        "on-scroll-up": "light -A 7",
+        "on-scroll-down": "light -U 7",
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "",
+            "󰄋",
+            "󰧑",
+            "󰄌"
+        ]
+    },
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M %a %b %d}",
+        "tooltip": true,
+        "tooltip-format": "<big>{:%A, %d %B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+
+    "mpd": {
+        "max-length": 25,
+        "format": "<span foreground='#bb9af7'>󰝚</span> {title}",
+        "format-paused": "󰝚 {title}",
+        "format-stopped": "<span foreground='#bb9af7'>󰝚</span>",
+        "format-disconnected": "",
+        "on-click": "mpc --quiet toggle",
+        "on-click-right": "mpc ls | mpc add",
+        "on-click-middle": "kitty ncmpcpp",
+        "on-scroll-up": "mpc --quiet prev",
+        "on-scroll-down": "mpc --quiet next",
+        "smooth-scrolling-threshold": 5,
+        "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "tooltip": false,
+        "format-muted": "󰕿 Muted",
+        "on-click": "~/.config/waybar/scripts/audio_changer.py",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-middle": "pavucontrol",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰥰",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰏲",
+            "car": "󰄋",
+            "default": ["", "", "󰕾"]
+        }
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 5
+    },
+
+    //****************
+    // Custom Modules
+    //****************
+
+    "custom/cava-internal": {
+        "exec": "~/.config/waybar/Cava.sh",
+        "tooltip": false
+    },
+
+    "custom/launcher": {
+        "format": "",
+        "on-click": "~/.config/rofi/bin/launcher",
+        "tooltip-format": "pacman -Q linux",
+        "tooltip": true
+    },
+
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 25,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        "exec": "/usr/bin/python3 $HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon} {}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>󰂚",
+            "none": "󰂜",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>󰂛",
+            "dnd-none": "󰪑",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>󰂚",
+            "inhibited-none": "󰂜",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>󰂛",
+            "dnd-inhibited-none": "󰪑"
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+
+    "custom/pacman": {
+        "format": " {}",
+        "interval": 1800,
+        "exec": "checkupdates | wc -l",
+        //"exec-if": "exit 0",
+        "on-click": "kitty yay",
+        "signal": 8
+    },
+
+    "custom/powermenu": {
+        "format": "",
+        "on-click": "~/.config/rofi/bin/powermenu",
+        "tooltip": false
+    },
+
+    "custom/reboot": {
+        "format": "{}",
+        "critical-threshold": 1,
+        "states": {
+            "critical": 1
+        },
+        "interval": 600,
+        "exec": "~/.config/my-shared-config/check-reboot-required",
+        "return-type": "json"
+    },
+
+    "custom/recording": {
+        "exec": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh status",
+        "format": "{}",
+        "on-click": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle fullscreen",
+        "on-click-right": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle region",
+        "restart-interval": 1,
+        "return-type": "json",
+        "tooltip": true
+    },
+
+    "custom/scratchpad-indicator": {
+        "interval": 3,
+        "return-type": "json",
+        "exec": "swaymsg -t get_tree | jq --unbuffered --compact-output '(recurse(.nodes[]) | select(.name == \"__i3_scratch\") | .focus) as $scratch_ids | [..  | (.nodes? + .floating_nodes?) // empty | .[] | select(.id |IN($scratch_ids[]))] as $scratch_nodes | if ($scratch_nodes|length) > 0 then { text: \"\\($scratch_nodes | length)\", tooltip: $scratch_nodes | map(\"\\(.app_id // .window_properties.class) (\\(.id)): \\(.name)\") | join(\"\\n\") } else empty end'",
+        "format": " {}",
+        "on-click": "exec swaymsg 'scratchpad show'",
+        "on-click-right": "exec swaymsg 'move scratchpad'"
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 900,
+        "exec": "~/.config/waybar/wabar-wttr.py",
+        "return-type": "json"
+    }
+}]

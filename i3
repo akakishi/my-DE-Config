@@ -1,1 +1,0 @@
-/home/ramirods/.config/i3

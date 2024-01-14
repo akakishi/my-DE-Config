@@ -1,0 +1,55 @@
+/*@import "~/.config/my-shared-config/colors.css";*/
+
+* {
+    font-family: FiraCode Nerd Font;
+    font-size: 14px;
+}
+
+window {
+    margin: 0px;
+    border: 1px solid #11111b;
+    background-color: #1e1e2e;
+    border-radius: 6px;
+}
+
+#input {
+    margin: 2 px;
+    border: none;
+    color: #222222;
+    background-color: #eeeeee;
+}
+
+#inner-box {
+    margin: 2px;
+    border: none;
+    background-color: #1e1e2e;
+}
+
+#outer-box {
+    margin: 2px;
+    border: none;
+    background-color: #1e1e2e;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 2px;
+    border: none;
+    color: #cdd6f4;
+}
+
+#entry:selected {
+    background-color: #11111b;
+    color: #1e1e2e;
+}
+#entry {
+    /*border-bottom-style: solid;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: #b4befe;*/
+}
+

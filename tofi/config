@@ -1,0 +1,81 @@
+### Include
+
+#include = /path
+
+
+### Font
+
+font = /usr/share/fonts/TTF/FiraCodeNerdFontMono-Regular.ttf
+font-size = 24
+font-features = "liga 1"
+font-variations = ""
+hint-font = false
+
+
+### Window Theme
+
+width = 500
+height = 750
+background-color = #1e1e2e
+outline-width = 0
+outline-color = #0e0e1e
+border-width = 0
+border-color = #0e0e1e
+corner-radius = 6
+padding-left = 8
+padding-top = 8
+padding-right = 8
+padding-bottom = 8
+clip-to-padding = true
+scale = false
+
+
+### Window Position
+
+output = ""
+anchor = center
+exclusive-zone = -1
+margin-top = 0
+margin-bottom = 0
+margin-left = 0
+margin-right = 0
+
+
+### Behaviour
+
+hide-cursor = false
+text-cursor = false
+history = true
+matching-algorithm = fuzzy
+require-match = true
+auto-accept-single = false
+hide-input = false
+hidden-character = "*"
+physical-keybindings = false
+drun-launch = true
+terminal = kitty
+late-keyboard-init = false
+multi-instance = false
+ascii-input = true
+
+
+### Text Theme
+
+text-color = #cdd6f4
+selection-color = #933
+
+### Text Cursor
+
+text-cursor-style = bar
+
+
+### Prompt
+
+prompt-text = "run: "
+prompt-padding = 0
+placeholder-text = ""
+num-results = 9
+result-spacing = 0
+horizontal = false
+min-input-width = 0
+

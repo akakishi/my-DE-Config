@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+shutdown=''
+reboot=''
+lock=''
+suspend=''
+logout=''
+
+rdialog () {
+rofi -dmenu\
+    -i\
+    -no-fixed-num-lines\
+    -p "Are You Sure? : "\
+    -theme "$ddir/confirm.rasi"
+}
+
+chosen=$(printf '%s;%s;%s;%s;%s\n' "$shutdown" "$reboot" "$lock" \
+        "$suspend" "$logout" \
+    | rofi -theme-str '@import "~/.config/rofi/newmenu/themes/power.rasi"' \
+        -dmenu \
+        -sep ';' \
+        -selected-row 2)
+
+case "$chosen" in
+    "$shutdown")
+		ans=$(rdialog &)
+		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+			systemctl poweroff
+		else
+			exit
+        fi
+        ;;
+    "$reboot")
+		ans=$(rdialog &)
+		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+			systemctl reboot
+		else
+			exit
+        fi
+        ;;
+    "$lock")
+        sh $HOME/.local/bin/lock
+        ;;
+    "$suspend")
+		ans=$(rdialog &)
+		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+			mpc -q pause
+			amixer set Master mute
+			sh $HOME/.local/bin/lock
+			systemctl suspend
+		else
+			exit
+        fi
+        ;;
+    "$logout")
+		ans=$(rdialog &)
+		if [[ $ans == "yes" ]] || [[ $ans == "YES" ]] || [[ $ans == "y" ]]; then
+			bspc quit
+		else
+			exit
+        fi
+        ;;
+esac
