@@ -91,7 +91,7 @@ element-icon {
 element-text {
     background-color: 		        inherit;
     text-color:       		        inherit;
-    font:			                "FiraCode Nerd Font 20";
+    /*font:			                "JetBrainsMono Nerd Font 20";*/
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0.5;

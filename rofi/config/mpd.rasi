@@ -44,7 +44,6 @@ textbox-prompt-colon {
     background-color:               @BG;
     text-color:                     @FG;
     padding:                        8px 12px 8px 12px;
-    font:			                "Iosevka Nerd Font 10";
 }
 
 entry {
@@ -132,22 +131,22 @@ element selected {
 
 element.active,
 element.selected.urgent {
-  background-color: @ON;
-  text-color: @BG;
-  border-color: @ON;
+    background-color: @ON;
+    text-color: @BG;
+    border-color: @ON;
 }
 
 element.selected.urgent {
-  border-color: @BDR;
+    border-color: @BDR;
 }
 
 element.urgent,
 element.selected.active {
-  background-color: @OFF;
-  text-color: @BG;
-  border-color: @OFF;
+    background-color: @OFF;
+    text-color: @BG;
+    border-color: @OFF;
 }
 
 element.selected.active {
-  border-color: @BDR;
+    border-color: @BDR;
 }

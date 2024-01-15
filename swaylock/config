@@ -9,7 +9,7 @@
 # ----------------------------------------------------- 
 
 ignore-empty-password
-font="FiraCode Nerd Font Regular"
+font="JetBrainsMono Nerd Font Regular"
 
 clock
 timestr=%R

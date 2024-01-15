@@ -2,7 +2,7 @@
 
 /* Global */
 * {
-  font-family: "FiraCode Nerd Font";
+  font-family: "JetBrainsMono Nerd Font";
   font-size: 1.2rem;
   border-radius: 1rem;
   transition-property: background-color;
@@ -189,5 +189,5 @@ tooltip label {
   color: #ffa000;
 }
 #custom-notification {
-  font-family: "FiraCode Nerd Font";
+  font-family: "JetBrainsMono Nerd Font";
 }

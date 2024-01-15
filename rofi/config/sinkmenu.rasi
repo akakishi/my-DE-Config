@@ -61,7 +61,6 @@ element-icon {
 element-text {
     background-color: 		        inherit;
     text-color:       		        inherit;
-    font:			                "FiraCode Nerd Font 11";
     expand:                         true;
     horizontal-align:               0;
     vertical-align:                 0;
