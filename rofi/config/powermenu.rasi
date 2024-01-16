@@ -1,124 +1,107 @@
-/*******************************************************
- * ROFI configs i3 powermenu for EndeavourOS
- * Maintainer: joekamprad [joekamprad //a_t// endeavouros.com]
- *******************************************************/
 configuration {
-    font:            "Noto Sans Regular 10";
-    show-icons:      false;
-    icon-theme:      "Qogir";
-    scroll-method:   0;
-    disable-history: false;
-    sidebar-mode:    false;
+    modi:                           "dmenu";
+    show-icons:                     true;
+    display-drun: 		            "";
+    drun-display-format:            "{icon} {name}";
+    disable-history:                false;
+    click-to-exit: 		            true;
+    location:                       0;
 }
 
-@import "~/.config/rofi/arc_dark_transparent_colors.rasi"
+@import "font.rasi"
+@import "colors.rasi"
+
+/* Line Responsible For Button Layouts */
+/* BUTTON = TRUE */
 
 window {
-    background-color: @background;
-    border:           0;
-    padding:          10;
-    transparency:     "real";
-    width:            120px;
-    location:         east;
-    /*y-offset:       18;*/
-    /*x-offset:       850;*/
-}
-listview {
-    lines:     7;
-    columns:   1;
-    scrollbar: false;
-}
-element {
-    border:  0;
-    padding: 1px;
-}
-element-text {
-    background-color: inherit;
-    text-color:       inherit;
-}
-element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
-}
-element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
-}
-element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
-}
-element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-}
-element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
-}
-element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
-}
-element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
-}
-element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
-}
-element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
-}
-scrollbar {
-    width:        4px;
-    border:       0;
-    handle-color: @normal-foreground;
-    handle-width: 8px;
-    padding:      0;
-}
-mode-switcher {
-    border:       2px 0px 0px;
-    border-color: @separatorcolor;
-}
-button {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-}
-inputbar {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    1px;
-}
-case-indicator {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-entry {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-prompt {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
-textbox-prompt-colon {
-    expand:     false;
-    str:        ":";
-    margin:     0px 0.3em 0em 0em;
-    text-color: @normal-foreground;
+    transparency:                   "real";
+    background-color:               @BG;
+    text-color:                     @FG;
+    border:                  	    2px;
+    border-color:                   @BDR;
+    border-radius:                  10px;
+    width:                          350px;
+    anchor:                         center;
+    padding:                        10px;
+    x-offset:                       0;
+    y-offset:                       0;
 }
 
-/*removes the text input line*/
+prompt {
+    enabled:                        true;
+    padding:                        8px;
+    background-color:               @BG;
+    text-color:                     @FG;
+}
+
+entry {
+    expand:                         true;
+    width:                          150px;
+    background-color:               @BG;
+    text-color:                     @FG;
+}
+
+inputbar {
+    children:                       [ prompt ];
+    background-color:               @BG;
+    text-color:                     @FG;
+    expand:                         false;
+    margin:                         0px;
+    padding:                        0px;
+    position:                       center;
+}
+
+listview {
+    background-color:               @BG;
+    columns:                        1;
+    lines:			                5;
+    fixed-height:                   true;
+    fixed-columns:                  true;
+    spacing:                        4px;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
 mainbox {
-  children: [listview];
+    background-color:               @BG;
+    children:                       [ inputbar, listview ];
+    spacing:                        15px;
+    padding:                        15px;
+}
+
+element {
+    background-color:               @BG;
+    text-color:                     @FG;
+    orientation:                    horizontal;
+    border-radius:                  10px;
+    padding:                        20px;
+}
+
+element-icon {
+    background-color: 		        inherit;
+    text-color:       		        inherit;
+    /*horizontal-align:               0.5;*/
+    /*vertical-align:                 0.5;*/
+    size:                           0px;
+    border:                         0px;
+}
+
+element-text {
+    background-color: 		        inherit;
+    text-color:       		        inherit;
+    /*font:			                "JetBrainsMono Nerd Font 20";*/
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0.5;
+    margin:                         0px 0px 0px 0px;
+}
+
+element selected {
+    background-color:               @BGA;
+    text-color:                     @SEL;
+    border:                  	    0px 0px 0px 0px;
+    border-radius:                  10px;
+    border-color:                   @BDR;
 }
