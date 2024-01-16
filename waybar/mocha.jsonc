@@ -247,7 +247,7 @@
 
     "custom/launcher": {
         "format": "",
-        "on-click": "~/.config/rofi/bin/launcher",
+        "on-click": "~/.config/rofi/bin/launcher.sh",
         "tooltip-format": "pacman -Q linux",
         "tooltip": true
     },
@@ -300,7 +300,7 @@
 
     "custom/powermenu": {
         "format": "",
-        "on-click": "~/.config/rofi/bin/powermenu",
+        "on-click": "~/.config/rofi/bin/powermenu.sh",
         "tooltip": false
     },
 
@@ -311,7 +311,7 @@
             "critical": 1
         },
         "interval": 600,
-        "exec": "~/.config/my-shared-config/check-reboot-required",
+        "exec": "~/.config/my-shared-config/check-reboot-required.sh",
         "return-type": "json"
     },
 

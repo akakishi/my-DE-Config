@@ -1,9 +1,9 @@
 * {
   /* General */
-  text-font:                            "FiraCode Nerd Font 14";
-  text-font-mono:                       "FiraCode Nerd Font 14";
-  icon-font:                            "FiraCode Nerd Font 60";
-  icon-font-small:                      "FiraCode Nerd Font 24";
+  text-font:                            "JetBrainsMono Nerd Font 14";
+  text-font-mono:                       "JetBrainsMono Nerd Font 14";
+  icon-font:                            "JetBrainsMono Nerd Font 60";
+  icon-font-small:                      "JetBrainsMono Nerd Font 24";
   all-inputbar-margin:                  4px 4px;
   all-prompt-padding:                   16px 20px;
   all-entry-padding:                    18px 16px 16px 0px;
@@ -42,7 +42,7 @@
 
   network-textbox-prompt-colon-padding: 14px 10px 10px 10px;
 
-  prompt-text-font:                     "FiraCode Nerd Font 18";
+  prompt-text-font:                     "JetBrainsMono Nerd Font 18";
   prompt-window-height:                 300px;
   prompt-window-width:                  627px;
   prompt-window-border:                 2px;

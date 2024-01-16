@@ -20,7 +20,7 @@ set $down t
 set $up n
 set $right s
 set $term kitty
-#set $menu ~/.config/my-shared-config/wofi-launch.sh
+#set $menu ~/.config/my-shared-config/wofi/wofi-launch.sh
 set $menu ~/.config/rofi/bin/launcher
 
 #

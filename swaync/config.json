@@ -136,7 +136,7 @@
       "actions": [
         {
           "label": "",
-          "command": "~/.config/rofi/rofi-wifi-menu.sh"
+          "command": "~/.config/rofi/config/rofi-wifi-menu.sh"
         },
         {
           "label": "",

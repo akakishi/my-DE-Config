@@ -18,7 +18,7 @@ selected=$(echo -e $entries | wofi \
     --define=hide_search=true \
     --define=allow_markup=true \
     --cache-file /dev/null \
-    --style ~/.config/my-shared-config/wofi-power.css \
+    --style ~/.config/my-shared-config/wofi/wofi-power.css \
     | awk '{print tolower($2)}')
 
 case $selected in
