@@ -1,3 +1,6 @@
 * {
-    font:				 	"JetBrainsMono Nerd Font 20";
+    font20:				 	"JetBrainsMono Nerd Font 20";
+    font14:				 	"JetBrainsMono Nerd Font 14";
+    font10:				 	"JetBrainsMono Nerd Font 10";
+    font:				 	"JetBrainsMono Nerd Font 16";
 }

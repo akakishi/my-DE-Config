@@ -33,6 +33,7 @@ prompt {
     padding:                        8px;
     background-color:               @BG;
     text-color:                     @FG;
+    font:                           @font14;
 }
 
 entry {
@@ -62,6 +63,7 @@ listview {
     cycle:                          false;
     dynamic:                        true;
     layout:                         vertical;
+    font:                           @font20;
 }
 
 mainbox {

@@ -71,5 +71,8 @@
                       :width "98%"
                       :height "10px"
                       :anchor "top center")
-  :reserve (struts :side "top" :distance "4%")
+  :stacking "fg"
+  :exclusive true
+  :focusable true
+  :namespace "top"
   (bar))
