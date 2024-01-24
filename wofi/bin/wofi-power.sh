@@ -29,9 +29,9 @@ case $selected in
     lock)
         exec swaylock -f;;
     suspend)
-        exec systemctl suspend;;
+        exec loginctl suspend;;
     reboot)
-        exec systemctl reboot;;
+        exec loginctl reboot;;
     shutdown)
-        exec systemctl poweroff;;
+        exec loginctl poweroff;;
 esac

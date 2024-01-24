@@ -4,7 +4,7 @@ xwayland enable
 # Basic Settings
 #
 
-font pango: JetBrainsMono Nerd Font Medium 12
+font pango: JetBrainsMono Nerd Font Medium 12, IPA Gothic 11.5
 gaps inner 10
 gaps outer 10
 smart_borders on

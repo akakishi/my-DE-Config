@@ -48,31 +48,31 @@ indicator-caps-lock
 
 # Define all colors
 
-key-hl-color=00000066
+key-hl-color=b4befe
 separator-color=00000000
 
-inside-color=00000033
-inside-clear-color=ffffff00
-inside-caps-lock-color=ffffff00
-inside-ver-color=ffffff00
-inside-wrong-color=ffffff00
+inside-color=1e1e2e33
+inside-clear-color=1e1e2e33
+inside-caps-lock-color=1e1e2e33
+inside-ver-color=1e1e2e33
+inside-wrong-color=1e1e2e33
 
-ring-color=ffffff
-ring-clear-color=ffffff
-ring-caps-lock-color=ffffff
-ring-ver-color=ffffff
-ring-wrong-color=ffffff
+ring-color=1e1e2e
+ring-clear-color=a6e3a1
+ring-caps-lock-color=1e1e2e
+ring-ver-color=1e1e2e
+ring-wrong-color=f38ba8
 
-line-color=00000000
-line-clear-color=ffffffFF
-line-caps-lock-color=ffffffFF
-line-ver-color=ffffffFF
-line-wrong-color=ffffffFF
+line-color=1e1e2e00
+line-clear-color=1e1e2e00
+line-caps-lock-color=1e1e2e00
+line-ver-color=1e1e2e00
+line-wrong-color=1e1e2e00
 
-text-color=ffffff
-text-clear-color=ffffff
-text-ver-color=ffffff
-text-wrong-color=ffffff
+text-color=cdd6f4
+text-clear-color=cdd6f4
+text-ver-color=cdd6f4
+text-wrong-color=cdd6f4
 
 bs-hl-color=ffffff
 caps-lock-key-hl-color=ffffffFF

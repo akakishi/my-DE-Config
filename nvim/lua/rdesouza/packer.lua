@@ -52,4 +52,5 @@ return require("packer").startup(function(use)
         "vim-airline/vim-airline-themes",
         run = ":AirlineTheme catppuccin"
     }
+    use { "rust-lang/rust.vim" }
 end)

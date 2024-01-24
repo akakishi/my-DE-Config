@@ -16,12 +16,12 @@
         //"custom/launcher",
         //"sway/workspaces",
         "hyprland/workspaces",
-        "custom/scratchpad-indicator"
+        "custom/scratchpad-indicator",
         //"sway/mode",
         //"sway/window"
+        "hyprland/window" 
     ],
     "modules-center": [
-        "hyprland/window" 
     ],
     "modules-right": [
         "custom/media",
@@ -101,25 +101,23 @@
 
     "hyprland/workspaces": {
         "format": "{icon}",
+        "on-click": "activate",
         "on-scroll-up": "sleep 0.1 && hyprctl dispatch workspace e+1",
         "on-scroll-down": "sleep 0.1 && hyprctl dispatch workspace e-1",
         "active-only": true,
-        "format": "{icon}",
+        "all-outputs": true,
         "format-icons": {
-            /*"1": "[1]",
-            "2": "[2]",
-            "3": "[3]",
-            "4": "[4]",
-            "5": "[5]",
-            "6": "[6]",
-            "7": "[7]",
-            "8": "[8]",
-            "9": "[9]",
-            "10": "[10]",*/
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
             "urgent": "",
             "focused": "",
             "default": ""
-        }
+        },
+        "sort-by-number": true,
+        "show-special": true
     },
 
     //****************
@@ -305,13 +303,13 @@
         "tooltip": false,
         "format": "{icon} {}",
         "format-icons": {
-            "notification": "<span foreground='red'><sup></sup></span>󰂚",
+            "notification": "󰂚",
             "none": "󰂜",
-            "dnd-notification": "<span foreground='red'><sup></sup></span>󰂛",
+            "dnd-notification": "󰂛",
             "dnd-none": "󰪑",
-            "inhibited-notification": "<span foreground='red'><sup></sup></span>󰂚",
+            "inhibited-notification": "󰂚",
             "inhibited-none": "󰂜",
-            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>󰂛",
+            "dnd-inhibited-notification": "󰂛",
             "dnd-inhibited-none": "󰪑"
         },
         "return-type": "json",

@@ -20,15 +20,17 @@ case $chosen in
         exit
         ;;
     $lock)
-        sh $HOME/.local/bin/lock
+        swaylock -f
         ;;
+        # sh $HOME/.local/bin/lock
+        # ;;
     $logout)
 		swaymsg exit
         ;;
     $reboot)
-		systemctl reboot
+		loginctl reboot
         ;;
     $shutdown)
-		systemctl poweroff
+		loginctl poweroff
 		;;
 esac
