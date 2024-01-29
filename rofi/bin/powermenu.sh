@@ -25,7 +25,7 @@ case $chosen in
         # sh $HOME/.local/bin/lock
         # ;;
     $logout)
-		swaymsg exit
+		hyprtcl dispatch exit
         ;;
     $reboot)
 		loginctl reboot

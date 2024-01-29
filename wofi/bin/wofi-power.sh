@@ -25,13 +25,13 @@ case $selected in
     cancel)
         exit;;
     logout)
-        swaymsg exit;;
+        hyprctl dispatch exit;;
     lock)
         exec swaylock -f;;
     suspend)
-        exec loginctl suspend;;
+        exec systemctl suspend;;
     reboot)
-        exec loginctl reboot;;
+        exec systemctl reboot;;
     shutdown)
-        exec loginctl poweroff;;
+        exec systemctl poweroff;;
 esac

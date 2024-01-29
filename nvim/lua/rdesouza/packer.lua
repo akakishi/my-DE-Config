@@ -53,4 +53,5 @@ return require("packer").startup(function(use)
         run = ":AirlineTheme catppuccin"
     }
     use { "rust-lang/rust.vim" }
+    use { "eandrju/cellular-automaton.nvim" }
 end)

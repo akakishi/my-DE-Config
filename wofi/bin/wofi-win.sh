@@ -1,25 +1,35 @@
 #!/usr/bin/env bash
 
-swaymsg -t get_tree | jq -r '
-        # descend to workspace or scratchpad
-        .nodes[].nodes[]
-        # save workspace name as .w
-        | {"w": .name} + (
-                if .nodes then # workspace
-                        [recurse(.nodes[])]
-                else # scratchpad
-                        []
-                end
-                + .floating_nodes
-                | .[]
-                # select nodes with no children (windows)
-                | select(.nodes==[])
-        )
-        | ((.id | tostring) + "\t "
-        # remove markup and index from workspace name, replace scratch with "[S]"
-        + (.w | gsub("^[^:]*:|<[^>]*>"; "") | sub("__i3_scratch"; "[S]"))
-        + "\t " +  .name)
-        ' | wofi --show dmenu --prompt='Focus a window' | {
-    read -r id name
-    swaymsg "[con_id=$id]" focus
-}
+state="$(hyprctl -j clients)"
+active_window="$(hyprctl -j activewindow)"
+
+current_addr="$(echo "$active_window" | gojq -r '.address')"
+
+window="$(echo "$state" |
+    gojq -r '.[] | select(.monitor != -1 ) | "\(.address)    \(.workspace.name)    \(.title)"' |
+    sed "s|$current_addr|focused ->|" |
+    sort -r |
+    wofi --show dmenu --matching=fuzzy)"
+
+addr="$(echo "$window" | awk '{print $1}')"
+ws="$(echo "$window" | awk '{print $2}')"
+
+if [[ "$addr" =~ focused* ]]; then
+    echo 'already focused, exiting'
+    exit
+fi
+
+fullscreen_on_same_ws="$(echo "$state" | gojq -r ".[] | select(.fullscreen == true) | select(.workspace.name == \"$ws\") | .address")"
+
+if [[ "$window" != "" ]]; then
+    if [[ "$fullscreen_on_same_ws" == "" ]]; then
+        hyprctl dispatch focuswindow address:${addr}
+    else
+        # If we want to focus app_A and app_B is fullscreen on the same workspace,
+        # app_A will get focus, but app_B will remain on top.
+        # This monstrosity is to make sure app_A will end up on top instead.
+        # XXX: doesn't handle fullscreen 0, but I don't care.
+        notify-send 'Complex switch' "$window"
+        hyprctl --batch "dispatch focuswindow address:${fullscreen_on_same_ws}; dispatch fullscreen 1; dispatch focuswindow address:${addr}; dispatch fullscreen 1"
+    fi
+fi

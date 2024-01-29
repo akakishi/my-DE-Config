@@ -7,6 +7,13 @@ stylesheet=style.css
 watch_css=true
 colors=colors
 
+show=drun
+width=500
+insensitive=true
+allow_markup=true
+columns=7
+location=center
+term=kitty
 
 prim-interval=100
 prim-location=bottom
