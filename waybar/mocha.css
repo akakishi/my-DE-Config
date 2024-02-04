@@ -2,19 +2,19 @@
 
 /* Global */
 * {
-  font-family: "JetBrainsMono Nerd Font", "IPA Gothic";
+  font-family: "JetBrainsMono Nerd Font", "IPA Gothic", FontAwesome, monospace;
   font-size: 1.2rem;
-  border-radius: 1rem;
+  /*border-radius: 1rem;*/
   transition-property: background-color;
   transition-duration: 0.5s;
-  background-color: @base;
+  /*background-color: @base;*/
   /*background-color: rgba(30, 30, 46, 0.5);*/
 }
 
 @keyframes blink_red {
   to {
     background-color: @red;
-    color: @base;
+    color: @text;
   }
 }
 
@@ -48,9 +48,11 @@
 #scratchpad,
 #temperature,
 #tray,
-#window {
+#window,
+#workspaces {
   padding: .3rem .6rem;
-  margin: .1rem .1rem;
+  /*margin: .1rem .1rem;*/
+  background-color: @base;
 }
 
 /* Bar */
@@ -62,11 +64,17 @@ window > box {
   /*background-color: transparent;*/
   margin: .3rem;
   margin-bottom: 3px;
+  background-color: @base;
+  border-radius: 1rem;
   /*box-shadow: 0px 1px 4px 4px rgba(48, 48, 48, 0.5);*/
 }
 
 
 /* Workspaces */
+#workspaces {
+    background-color: transparent;
+}
+
 #workspaces:hover {
   background-color: @green;
 }
@@ -76,12 +84,12 @@ window > box {
   padding-left: .4rem;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  color: @teal;
+  color: @blue;
   background: transparent;
 }
 
 #workspaces button.active {
-  color: @blue;
+  color: @teal;
 }
 
 #workspaces button:hover {
@@ -95,7 +103,7 @@ tooltip {
 }
 
 tooltip label {
-  color: @rosewater;
+    color: @rosewater;
 }
 
 /* battery */
@@ -116,6 +124,7 @@ tooltip label {
 }
 #custom-powermenu {
   color: @red;
+  border-radius: 1rem;
 }
 
 /* mpd */
@@ -173,7 +182,7 @@ tooltip label {
   color: @sky;
 }
 #custom-scratchpad-indicator {
-  color: @yellow
+  color: @yellow;
 }
 #custom-weather {
   color: @red;

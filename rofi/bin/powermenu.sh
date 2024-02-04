@@ -28,9 +28,9 @@ case $chosen in
 		hyprtcl dispatch exit
         ;;
     $reboot)
-		loginctl reboot
+		systemctl reboot
         ;;
     $shutdown)
-		loginctl poweroff
+		systemctl poweroff
 		;;
 esac

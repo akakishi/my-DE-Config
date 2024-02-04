@@ -95,7 +95,7 @@
     //****************
 
     "hyprland/window": {
-        "max-length": 200,
+        "max-length": 300,
         "separate-outputs": true
     },
 
@@ -107,11 +107,11 @@
         "active-only": true,
         "all-outputs": true,
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
+            //"1": "",
+            //"2": "",
+            //"3": "",
+            //"4": "",
+            //"5": "",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -174,11 +174,10 @@
 
     "network": {
         "interval": 1,
-        "format-wifi": " {essid}",
-        // "format-ethernet": "󰈀 {ifname} ({ipaddr})",
+        "format-wifi": "",
         "format-ethernet": "󰈀",
-        "format-linked": " {essid} (No IP)",
-        "format-disconnected": "󰪎 Disconnected",
+        "format-linked": "",
+        "format-disconnected": "󰪎",
         "tooltip": true,
         "tooltip-format": "{ifname} ({ipaddr})"
     },
@@ -366,7 +365,7 @@
     },
 
     "custom/weather": {
-        "format": "{}",
+        "format": "test",
         "tooltip": true,
         "interval": 900,
         "exec": "~/.config/waybar/wabar-wttr.py",
