@@ -1,4 +1,6 @@
 gui:
+  timeFormat: '02 Jan 06' # https://pkg.go.dev/time#Time.Format
+  shortTimeFormat: '15:04'
   # Catppuccin Mocha
   theme:
     activeBorderColor:

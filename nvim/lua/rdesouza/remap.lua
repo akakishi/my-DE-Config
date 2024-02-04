@@ -61,3 +61,8 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+-- lazygit
+vim.keymap.set("n", "<leader>gg", function ()
+    vim.cmd("LazyGit")
+end)

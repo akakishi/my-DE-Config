@@ -4,5 +4,5 @@ recentrepos:
 startuppopupversion: 5
 customcommandshistory:
 - q
-hidecommandlog: false
+hidecommandlog: true
 ignorewhitespaceindiffview: false
