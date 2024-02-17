@@ -16,7 +16,7 @@
         //"custom/launcher",
         //"sway/workspaces",
         "hyprland/workspaces",
-        "custom/scratchpad-indicator",
+        //"custom/scratchpad-indicator",
         //"sway/mode",
         //"sway/window"
         "hyprland/window" 
@@ -26,7 +26,6 @@
     "modules-right": [
         "custom/media",
         "mpd",
-        //"custom/audio",
         //"custom/pacman",
         //"custom/reboot",
         "tray",
@@ -61,11 +60,7 @@
     },
 
     "sway/window": {
-        "format": "{}",
-        //"max-length": 60
-        //"rewrite": {
-            //"(.*) Mozilla Firefox": "Firefox"
-        //}
+        "format": "{}"
     },
 
     "sway/workspaces": {
@@ -95,7 +90,7 @@
     //****************
 
     "hyprland/window": {
-        "max-length": 300,
+        "max-length": 400,
         "separate-outputs": true
     },
 
@@ -113,8 +108,9 @@
             //"4": "",
             //"5": "",
             "urgent": "",
-            "focused": "",
-            "default": ""
+            "active": "",
+            "default": "",
+            "special": ""
         },
         "sort-by-number": true,
         "show-special": true
@@ -292,7 +288,7 @@
         },
         "escape": true,
         // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        "exec": "/usr/bin/python3 $HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name
+        "exec": "/usr/bin/python3 $HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name
         "on-click": "sleep 0.1 && playerctl play-pause",
         "on-scroll-up": "sleep 0.1 && playerctl next",
         "on-scroll-down": "sleep 0.1 && playerctl previous"
@@ -322,9 +318,9 @@
     "custom/pacman": {
         "format": " {}",
         "interval": 1800,
-        "exec": "checkupdates | wc -l",
+        "exec": "sleep 0.1 && checkupdates | wc -l",
         //"exec-if": "exit 0",
-        "on-click": "kitty yay",
+        "on-click": "sleep 0.1 && kitty yay",
         "signal": 8
     },
 
@@ -341,15 +337,15 @@
             "critical": 1
         },
         "interval": 600,
-        "exec": "~/.config/my-shared-config/check-reboot-required.sh",
+        "exec": "sleep 0.1 && ~/.config/my-shared-config/check-reboot-required.sh",
         "return-type": "json"
     },
 
     "custom/recording": {
-        "exec": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh status",
+        "exec": "sleep 0.1 && $XDG_CONFIG_HOME/waybar/scripts/recording.sh status",
         "format": "{}",
-        "on-click": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle fullscreen",
-        "on-click-right": "$XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle region",
+        "on-click": "sleep 0.1 && $XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle fullscreen",
+        "on-click-right": "sleep 0.1 && $XDG_CONFIG_HOME/waybar/scripts/recording.sh toggle region",
         "restart-interval": 1,
         "return-type": "json",
         "tooltip": true
@@ -365,10 +361,10 @@
     },
 
     "custom/weather": {
-        "format": "test",
+        "format": "{}",
         "tooltip": true,
         "interval": 900,
-        "exec": "~/.config/waybar/wabar-wttr.py",
+        "exec": "sleep 0.1 && ~/.config/waybar/scripts/wabar-wttr.py",
         "return-type": "json"
     }
 }]

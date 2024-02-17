@@ -1,4 +1,5 @@
-@import url("./.config/my-shared-config/colors/mocha.css");
+@import url("./.config/my-shared-config/colors/frappe.css");
+/*@import url("./.config/my-shared-config/colors/mocha.css");*/
 
 * {
     font-family: JetBrainsMono Nerd Font;
@@ -26,15 +27,19 @@ window {
 }
 
 #outer-box {
-    margin: 15px;
-    padding: 20px;
-    border: none;
-    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    /*border: none;*/
+    border-radius: 2px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
     border-style: solid;
-    border-color: @peach;
-    border-width: 3px;
+    border-color: @blue;
+    /*border-width: 3px;*/
     background-color: @base;
-    box-shadow: 0px 0px 5px 5px rgba(88, 91, 112, 0.75);
+    box-shadow: 0px 0px 2px 2px rgba(88, 91, 112, 0.75);
     transition: 1s ease-in-out;
 }
 
@@ -54,12 +59,12 @@ window {
 }
 
 #entry:selected {
-    background-color: @rosewater;
+    background-color: @blue;
     /*background-color: #313244;*/
-    border-left-style: solid;
+    /*border-left-style: solid;*/
     border-width: 10px;
-    border-radius: 10px;
-    border-color: @rosewater;
+    border-radius: 2px;
+    border-color: @blue;
 }
 
 #entry {

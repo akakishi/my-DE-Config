@@ -51,6 +51,10 @@
 #window,
 #workspaces {
   padding: .3rem .6rem;
+  margin-top: 0;
+  margin-left: .1rem;
+  margin-right: .1rem;
+  margin-bottom: 0;
   /*margin: .1rem .1rem;*/
   /*background-color: rgba(30, 30, 46, 0.25);*/
   /*background-color: @base;*/
@@ -60,7 +64,7 @@
 /* Bar */
 window#waybar {
   /*background-color: transparent;*/
-  background-color: rgba(30, 30, 46, 0.25);
+  background-color: rgba(30, 30, 46, 0.50);
 }
 
 window > box {
@@ -104,7 +108,7 @@ window > box {
 /* Tooltip */
 tooltip {
   /*background-color: @base;*/
-  /*background-color: rgba(30, 30, 46, 0.25);*/
+  background-color: rgba(30, 30, 46, 0.75);
 }
 
 tooltip label {

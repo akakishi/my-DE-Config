@@ -53,17 +53,17 @@ for items in sinks:
         output += f"{items['sink_name']}"
 
 # Call wofi and show the list. take the selected sink name and set it as the default sink
-#wofi_command = f"echo '{output}' | wofi --show=dmenu --hide-scroll --allow-markup --define=hide_search=true --define=dynamic_lines=true --location=top_right --width=600 --height=150 --xoffset=-60"
-#wofi_process = subprocess.run(wofi_command, shell=True, encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+wofi_command = f"echo '{output}' | wofi --show=dmenu --hide-scroll --allow-markup --define=hide_search=true --define=dynamic_lines=true --location=top_right --width=700 --height=150 --xoffset=-60"
+wofi_process = subprocess.run(wofi_command, shell=True, encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-rofi_command = f"echo '{output}' | rofi -dmenu -m -1 -theme $HOME/.config/rofi/config/sinkmenu.rasi -selected-row {default_pos}"
-rofi_process = subprocess.run(rofi_command, shell=True, encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+#rofi_command = f"echo '{output}' | rofi -dmenu -m -1 -theme $HOME/.config/rofi/config/sinkmenu.rasi -selected-row {default_pos}"
+#rofi_process = subprocess.run(rofi_command, shell=True, encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-if rofi_process.returncode != 0:
+if wofi_process.returncode != 0:
     print("User cancelled the operation.")
     exit(0)
 
-selected_sink_name = rofi_process.stdout.strip()
+selected_sink_name = wofi_process.stdout.strip()
 sinks = parse_wpctl_status()
 selected_sink = next(sink for sink in sinks if sink['sink_name'] == selected_sink_name)
 subprocess.run(f"wpctl set-default {selected_sink['sink_id']}", shell=True)
