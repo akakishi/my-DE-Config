@@ -7,8 +7,9 @@ return require("packer").startup(function(use)
         tag = "0.1.x",
         requires = {{ "nvim-lua/plenary.nvim" }}
     }
-	use { "catppuccin/nvim", as = "catppuccin" }
-	use {
+    use { "catppuccin/nvim", as = "catppuccin" }
+	use { "ellisonleao/gruvbox.nvim" }
+    use {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate"
     }
@@ -62,4 +63,6 @@ return require("packer").startup(function(use)
         }
     }
     use { "lukas-reineke/indent-blankline.nvim" }
+    use { "prichrd/netrw.nvim" }
+    use { "nvim-tree/nvim-web-devicons" }
 end)

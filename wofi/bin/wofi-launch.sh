@@ -8,4 +8,4 @@ wofi \
     --hide-scroll \
     --insensitive \
     --define=allow_markup=true \
-    --style ~/.config/my-shared-config/wofi/wofi-launch.css
+    -a

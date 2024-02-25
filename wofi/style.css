@@ -1,4 +1,5 @@
 @import url("./.config/my-shared-config/colors/frappe.css");
+@import url("./.config/my-shared-config/colors/gruv-dark.css");
 /*@import url("./.config/my-shared-config/colors/mocha.css");*/
 
 * {
@@ -12,34 +13,41 @@ window {
 }
 
 #input {
-    margin: 5px;
-    color: @text;
-    background-color: @surface1;
-    transition: 0.5s ease-in-out;
-    border: none;
-    border-radius: 10px;
+    margin-bottom: 4px;
+    color: @fg;
+    background-color: @bg2;
+    border-style: solid;
+    border-radius: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 4px;
+    border-color: @fg;
 }
 
 #inner-box {
     margin: 0px;
     border: none;
-    background-color: @base;
+    background-color: @bg2;
 }
 
 #outer-box {
-    margin: 5px;
-    padding: 5px;
+    margin: 4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
     /*border: none;*/
     border-radius: 2px;
-    border-left-width: 0px;
-    border-right-width: 0px;
-    border-top-width: 5px;
-    border-bottom-width: 5px;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
     border-style: solid;
-    border-color: @blue;
+    border-color: @fg;
     /*border-width: 3px;*/
-    background-color: @base;
-    box-shadow: 0px 0px 2px 2px rgba(88, 91, 112, 0.75);
+    background-color: @bg2;
+    /*box-shadow: 0px 0px 2px 2px rgba(176, 182, 224, 0.75);*/
     transition: 1s ease-in-out;
 }
 
@@ -51,25 +59,20 @@ window {
 #text {
     margin: 2px;
     border: none;
-    color: @text;
+    color: @fg;
 }
 
 #text:selected {
-    color: @base;
+    font-weight: bold;
+    color: @bg;
 }
 
 #entry:selected {
-    background-color: @blue;
-    /*background-color: #313244;*/
-    /*border-left-style: solid;*/
-    border-width: 10px;
-    border-radius: 2px;
-    border-color: @blue;
+    background-color: @fg;
+    border-radius: 0px;
+    border-width: 0px;
 }
 
 #entry {
-    border-left-style: solid;
-    border-width: 10px;
-    border-radius: 10px;
-    border-color: @base;
+    background-color: @bg2;
 }

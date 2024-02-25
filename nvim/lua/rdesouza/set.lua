@@ -27,14 +27,7 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
-vim.opt.listchars = { space = '·' }
---[[vim.opt.listchars = {
-    eol = '↵',
-    tab = '▷',
-    trail = '·',
-    --extends = '◣',
-    --precedes = '◢',
-    nbsp = '○'
-}]]
+vim.opt.listchars = { space = '·', eol = '↵', tab = '--', nbsp = 'o', trail = '.', extends = '>', precedes = '<' }
+--vim.opt.listchars = { eol = '↵', tab = '▷', trail = '·', space = '·', extends = '◣', precedes = '◢', nbsp = '○' }
 
 vim.g.mapleader = " "

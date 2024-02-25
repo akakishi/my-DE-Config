@@ -326,7 +326,7 @@
 
     "custom/powermenu": {
         "format": "",
-        "on-click": "sleep 0.1 && ~/.config/rofi/bin/powermenu.sh",
+        "on-click": "sleep 0.1 && ~/.config/wofi/bin/wofi-power.sh",
         "tooltip": false
     },
 
