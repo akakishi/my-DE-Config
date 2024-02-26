@@ -1,0 +1,211 @@
+@import url("~/.config/my-shared-config/colors/gruv-dark.css");
+
+/* Global */
+* {
+  font-family: "JetBrainsMono Nerd Font", "IPA Gothic", FontAwesome, monospace;
+  font-size: 1.2rem;
+  /*border-radius: 1rem;*/
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  /*background-color: @base;*/
+  /*background-color: rgba(30, 30, 46, 0.25);*/
+}
+
+@keyframes blink_red {
+  to {
+    background-color: @red;
+    color: @fg;
+  }
+}
+
+.warning, .critical, .urgent {
+  animation-name: blink_red;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#backlight,
+#battery,
+#clock,
+#cpu,
+#custom-cava-internal,
+#custom-launcher,
+#custom-media,
+#custom-notification,
+#custom-pacman,
+#custom-powermenu,
+#custom-reboot,
+#custom-weather,
+#disk,
+#idle_inhibitor,
+#memory,
+#mode,
+#network,
+#mpd,
+#pulseaudio,
+#scratchpad,
+#temperature,
+#tray,
+#window,
+#workspaces {
+  padding: .3rem .6rem;
+  margin-top: 0;
+  margin-left: .1rem;
+  margin-right: .1rem;
+  margin-bottom: 0;
+  /*margin: .1rem .1rem;*/
+  /*background-color: rgba(30, 30, 46, 0.25);*/
+  /*background-color: @base;*/
+  background-color: transparent;
+}
+
+/* Bar */
+window#waybar {
+  /*background-color: transparent;*/
+  background-color: rgba(28, 28, 28, 0.50);
+}
+
+window > box {
+  margin: .3rem;
+  margin-bottom: 3px;
+  /*background-color: rgba(30, 30, 46, 0.25);*/
+  /*background-color: @base;*/
+  border-radius: 1rem;
+  background-color: transparent;
+  /*box-shadow: 0px 1px 4px 4px rgba(48, 48, 48, 0.5);*/
+}
+
+
+/* Workspaces */
+#workspaces {
+    background-color: transparent;
+}
+
+#workspaces:hover {
+  background-color: @green;
+}
+
+#workspaces button {
+  padding-right: .4rem;
+  padding-left: .4rem;
+  padding-top: .1rem;
+  padding-bottom: .1rem;
+  color: @blue;
+  background: transparent;
+}
+
+#workspaces button.active {
+  color: @aqua;
+}
+
+#workspaces button:hover {
+  border: .2px solid transparent;
+  color: @yellow;
+}
+
+/* Tooltip */
+tooltip {
+  /*background-color: @base;*/
+  background-color: rgba(28, 28, 28, 0.75);
+}
+
+tooltip label {
+    color: @yellow;
+}
+
+/* battery */
+#battery {
+  color: @green;
+}
+#battery.full {
+  color: @green;
+}
+#battery.charging{
+  color: @green;
+}
+#battery.discharging {
+  color: @green;
+}
+#battery.critical:not(.charging) {
+  color: @red;
+}
+#custom-powermenu {
+  color: @red;
+  border-radius: 1rem;
+}
+
+/* mpd */
+#mpd.paused {
+  color: @green;
+  font-style: italic;
+}
+#mpd.stopped {
+  color: @green;
+  background: transparent;
+}
+#mpd {
+  color: @green;
+}
+
+/* Extra */
+#custom-cava-internal{
+  color: @yellow;
+  padding-right: 1rem;
+}
+#custom-launcher {
+  color: @yellow;
+}
+#memory {
+  color: @blue;
+}
+#cpu {
+  color: @blue;
+}
+#clock {
+  color: @fg;
+}
+#idle_inhibitor {
+  color: @green;
+}
+#temperature {
+  color: @green;
+}
+#backlight {
+  color: @green;
+}
+#pulseaudio {
+  color: @green;  /* not active */
+}
+#network {
+  color: @green; /* not active */
+}
+#network.disconnected {
+  color: @purple;  /* not active */
+}
+#disk {
+  color: @green;
+}
+#custom-pacman{
+  color: @green;
+}
+#custom-scratchpad-indicator {
+  color: @green;
+}
+#custom-weather {
+  color: @fg;
+}
+#custom-media {
+  color: @orange;
+  /*font-weight: bold;*/
+}
+#custom-media.custom-spotify {
+  color: #1db954;
+}
+#custom-media.custom-vlc {
+  color: #ffa000;
+}
+#custom-notification {
+  font-family: "JetBrainsMono Nerd Font";
+}

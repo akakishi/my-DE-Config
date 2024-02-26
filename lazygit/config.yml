@@ -2,48 +2,49 @@ gui:
   timeFormat: '02 Jan 06' # https://pkg.go.dev/time#Time.Format
   shortTimeFormat: '15:04'
   # Catppuccin Mocha
-  #theme:
-  #  activeBorderColor:
-  #    - '#89b4fa'
-  #    - bold
-  #  inactiveBorderColor:
-  #    - '#a6adc8'
-  #  optionsTextColor:
-  #    - '#89b4fa'
-  #  selectedLineBgColor:
-  #    - '#313244'
-  #  selectedRangeBgColor:
-  #    - '#313244'
-  #  cherryPickedCommitBgColor:
-  #    - '#45475a'
-  #  cherryPickedCommitFgColor:
-  #    - '#89b4fa'
-  #  unstagedChangesColor:
-  #    - '#f38ba8'
-  #  defaultFgColor:
-  #    - '#cdd6f4'
-  #  searchingActiveBorderColor:
-  #    - '#f9e2af'
-  # Gruvbox Dark
   theme:
     activeBorderColor:
-      - '#ebdbb2'
+      - '#89b4fa'
       - bold
     inactiveBorderColor:
-      - '#7c6f6e'
+      - '#a6adc8'
     optionsTextColor:
-      - '#ebdbb2'
+      - '#89b4fa'
     selectedLineBgColor:
-      - '#928374'
+      - '#313244'
     selectedRangeBgColor:
-      - '#928374'
+      - '#313244'
     cherryPickedCommitBgColor:
       - '#45475a'
     cherryPickedCommitFgColor:
-      - '#ebdbb2'
+      - '#89b4fa'
     unstagedChangesColor:
-      - '#cc241d'
+      - '#f38ba8'
     defaultFgColor:
-      - '#ebdbb2'
+      - '#cdd6f4'
     searchingActiveBorderColor:
-      - '#d79921'
+      - '#f9e2af'
+  
+  # Gruvbox Dark
+  #theme:
+  #  activeBorderColor:
+  #    - '#ebdbb2'
+  #    - bold
+  #  inactiveBorderColor:
+  #    - '#7c6f6e'
+  #  optionsTextColor:
+  #    - '#ebdbb2'
+  #  selectedLineBgColor:
+  #    - '#928374'
+  #  selectedRangeBgColor:
+  #    - '#928374'
+  #  cherryPickedCommitBgColor:
+  #    - '#45475a'
+  #  cherryPickedCommitFgColor:
+  #    - '#ebdbb2'
+  #  unstagedChangesColor:
+  #    - '#cc241d'
+  #  defaultFgColor:
+  #    - '#ebdbb2'
+  #  searchingActiveBorderColor:
+  #    - '#d79921'

@@ -11,15 +11,14 @@ entries="$cancel\n$logout\n$lock\n$suspend\n$reboot\n$shutdown"
 
 selected=$(echo -e $entries | wofi \
     --width 250 \
-    --height 600 \
-    --lines 7 \
+    --lines 9 \
     --columns 1 \
     --show=dmenu \
     --hide-scroll \
     --define=hide_search=true \
-    --define=dynamic_lines=true \
+    --define=prompt=Search \
     --location=top_right \
-    --xoffset=-60 \
+    --xoffset=-20 \
     --allow_markup \
     --cache-file /dev/null \
     | awk '{print tolower($2)}')

@@ -13,42 +13,49 @@ window {
 }
 
 #input {
-    margin-bottom: 4px;
-    color: @fg;
-    background-color: @bg2;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 20px;
     border-style: solid;
     border-radius: 0px;
     border-left-width: 0px;
     border-right-width: 0px;
     border-top-width: 0px;
-    border-bottom-width: 4px;
-    border-color: @fg;
+    border-bottom-width: 0px;
+    outline: none;
+    color: @base;
+    background-color: @rosewater;
+    border-color: @text;
+}
+
+#input:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 #inner-box {
     margin: 0px;
     border: none;
-    background-color: @bg2;
+    background-color: @base;
 }
 
 #outer-box {
     margin: 4px;
-    padding-top: 0px;
-    padding-bottom: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     padding-left: 0px;
     padding-right: 0px;
-    /*border: none;*/
-    border-radius: 2px;
+    border-radius: 4px;
     border-left-width: 4px;
     border-right-width: 4px;
     border-top-width: 4px;
     border-bottom-width: 4px;
     border-style: solid;
-    border-color: @fg;
-    /*border-width: 3px;*/
-    background-color: @bg2;
-    /*box-shadow: 0px 0px 2px 2px rgba(176, 182, 224, 0.75);*/
     transition: 1s ease-in-out;
+    background-color: @base;
+    border-color: @rosewater;
 }
 
 #scroll {
@@ -59,20 +66,24 @@ window {
 #text {
     margin: 2px;
     border: none;
-    color: @fg;
+    color: @rosewater;
 }
 
 #text:selected {
     font-weight: bold;
-    color: @bg;
+    color: @base;
 }
 
 #entry:selected {
-    background-color: @fg;
-    border-radius: 0px;
-    border-width: 0px;
+    outline: none;
+    background-color: @rosewater;
 }
 
 #entry {
-    background-color: @bg2;
+    margin-right: 0px;
+    margin-left: 0px;
+    border-width: 0px;
+    border-radius: 0px;
+    padding-left: 20px;
+    background-color: @base;
 }

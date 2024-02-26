@@ -2,10 +2,10 @@
 
 wofi \
     --width 500 \
-    --height 750 \
-    --lines 12 \
+    --height 500 \
     --show drun \
     --hide-scroll \
     --insensitive \
     --define=allow_markup=true \
-    -a
+    --define=prompt=Search \
+    --no-action
