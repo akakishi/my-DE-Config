@@ -4,11 +4,8 @@
 * {
   font-family: "JetBrainsMono Nerd Font", "IPA Gothic", FontAwesome, monospace;
   font-size: 1.2rem;
-  /*border-radius: 1rem;*/
   transition-property: background-color;
   transition-duration: 0.5s;
-  /*background-color: @base;*/
-  /*background-color: rgba(30, 30, 46, 0.25);*/
 }
 
 @keyframes blink_red {
@@ -55,26 +52,28 @@
   margin-left: .1rem;
   margin-right: .1rem;
   margin-bottom: 0;
-  /*margin: .1rem .1rem;*/
-  /*background-color: rgba(30, 30, 46, 0.25);*/
-  /*background-color: @base;*/
   background-color: transparent;
 }
 
 /* Bar */
 window#waybar {
-  /*background-color: transparent;*/
-  background-color: rgba(30, 30, 46, 0.50);
+    background-color: rgba(30, 30, 46, 0.60);
+    /*background: rgb(30,30,46);
+    background: linear-gradient(
+        90deg,
+        rgba(30,30,46,0.75) 0%,
+        rgba(30,30,46,0.50) 25%,
+        rgba(30,30,46,0.75) 50%,
+        rgba(30,30,46,0.50) 75%,
+        rgba(30,30,46,0.75) 100%
+    );*/
 }
 
 window > box {
   margin: .3rem;
   margin-bottom: 3px;
-  /*background-color: rgba(30, 30, 46, 0.25);*/
-  /*background-color: @base;*/
   border-radius: 1rem;
   background-color: transparent;
-  /*box-shadow: 0px 1px 4px 4px rgba(48, 48, 48, 0.5);*/
 }
 
 
@@ -92,8 +91,8 @@ window > box {
   padding-left: .4rem;
   padding-top: .1rem;
   padding-bottom: .1rem;
-  color: @blue;
   background: transparent;
+  color: @blue;
 }
 
 #workspaces button.active {
@@ -107,17 +106,17 @@ window > box {
 
 /* Tooltip */
 tooltip {
-  /*background-color: @base;*/
-  background-color: rgba(30, 30, 46, 0.75);
+  background-color: rgba(30, 30, 46, 1);
+  border-radius: 1rem;
 }
 
 tooltip label {
-    color: @rosewater;
+    color: @lavender;
 }
 
 /* battery */
-#battery {
-  color: @mauve;
+/*#battery {
+  color: @lavender;
 }
 #battery.full {
   color: @green;
@@ -130,61 +129,62 @@ tooltip label {
 }
 #battery.critical:not(.charging) {
   color: @pink;
-}
+}*/
+
 #custom-powermenu {
   color: @red;
-  border-radius: 1rem;
 }
 
 /* mpd */
 #mpd.paused {
-  color: @pink;
+  color: @text;
   font-style: italic;
 }
 #mpd.stopped {
-  color: @rosewater;
+  color: @text;
   background: transparent;
 }
 #mpd {
-  color: @lavender;
+  color: @text;
 }
 
 /* Extra */
-#custom-cava-internal{
+/*#custom-cava-internal{
   color: @peach;
   padding-right: 1rem;
-}
-#custom-launcher {
+}*/
+/*#custom-launcher {
   color: @yellow;
-}
-#memory {
+}*/
+/*#memory {
   color: @peach;
-}
-#cpu {
-  color: @blue;
-}
+}*/
+/*#cpu {
+  color: @text;
+}*/
 #clock {
-  color: @rosewater;
+  color: @lavender;
 }
-#idle_inhibitor {
+/*#idle_inhibitor {
   color: @green;
-}
+}*/
 #temperature {
-  color: @sapphire;
+    color: @lavender;
 }
-#backlight {
+
+/*#backlight {
   color: @green;
-}
+}*/
 #pulseaudio {
-  color: @mauve;  /* not active */
+  color: @lavender;  /* not active */
 }
 #network {
-  color: @pink; /* not active */
+  color: @lavender; /* not active */
 }
 #network.disconnected {
-  color: @foreground;  /* not active */
+  color: @red;  /* not active */
 }
-#disk {
+/*#disk {
   color: @maroon;
 }
 #custom-pacman{
@@ -192,13 +192,12 @@ tooltip label {
 }
 #custom-scratchpad-indicator {
   color: @yellow;
-}
+}*/
 #custom-weather {
-  color: @red;
+  color: @lavender;
 }
 #custom-media {
   color: #333333;
-  /*font-weight: bold;*/
 }
 #custom-media.custom-spotify {
   color: #1db954;

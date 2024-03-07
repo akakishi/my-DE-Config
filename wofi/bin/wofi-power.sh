@@ -21,7 +21,7 @@ selected=$(echo -e $entries | wofi \
     --xoffset=-20 \
     --allow_markup \
     --cache-file /dev/null \
-    | awk '{print tolower($2)}')
+    | awk '{print tolower($1)}')
 
 case $selected in
     cancel)
@@ -29,11 +29,11 @@ case $selected in
     logout)
         hyprctl dispatch exit;;
     lock)
-        exec swaylock -f;;
+        swaylock -f;;
     suspend)
-        exec systemctl suspend;;
+        systemctl suspend;;
     reboot)
-        exec systemctl reboot;;
+        systemctl reboot;;
     shutdown)
-        exec systemctl poweroff;;
+        systemctl poweroff;;
 esac

@@ -1,5 +1,5 @@
 @import url("./.config/my-shared-config/colors/frappe.css");
-@import url("./.config/my-shared-config/colors/gruv-dark.css");
+/*@import url("./.config/my-shared-config/colors/gruv-dark.css");*/
 /*@import url("./.config/my-shared-config/colors/mocha.css");*/
 
 * {
@@ -8,7 +8,7 @@
 }
 
 window {
-    transition: 1s ease-in-out;
+    transition: 0.5s ease-in-out;
     background-color: transparent;
 }
 
@@ -26,7 +26,7 @@ window {
     border-bottom-width: 0px;
     outline: none;
     color: @base;
-    background-color: @rosewater;
+    background-color: @lavender;
     border-color: @text;
 }
 
@@ -48,14 +48,14 @@ window {
     padding-left: 0px;
     padding-right: 0px;
     border-radius: 4px;
-    border-left-width: 4px;
-    border-right-width: 4px;
-    border-top-width: 4px;
-    border-bottom-width: 4px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 8px;
+    border-bottom-width: 8px;
     border-style: solid;
     transition: 1s ease-in-out;
     background-color: @base;
-    border-color: @rosewater;
+    border-color: @lavender;
 }
 
 #scroll {
@@ -66,7 +66,7 @@ window {
 #text {
     margin: 2px;
     border: none;
-    color: @rosewater;
+    color: @lavender;
 }
 
 #text:selected {
@@ -76,7 +76,7 @@ window {
 
 #entry:selected {
     outline: none;
-    background-color: @rosewater;
+    background-color: @lavender;
 }
 
 #entry {

@@ -13,27 +13,20 @@
     //****************
 
     "modules-left": [
-        //"custom/launcher",
-        //"sway/workspaces",
         "hyprland/workspaces",
-        //"custom/scratchpad-indicator",
-        //"sway/mode",
-        //"sway/window"
         "hyprland/window" 
     ],
     "modules-center": [
+        "clock",
+        "custom/weather"
     ],
     "modules-right": [
         "custom/media",
         "mpd",
-        //"custom/pacman",
-        //"custom/reboot",
         "tray",
         "temperature",
         "pulseaudio",
         "network",
-        "custom/weather",
-        "clock",
         "custom/notification",
         "custom/powermenu"
     ],
