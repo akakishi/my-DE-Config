@@ -1,0 +1,67 @@
+@import url("./.config/my-shared-config/colors/frappe.css");
+
+* {
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 16px;
+}
+
+window {
+    transition: 0.5s ease-in-out;
+    background-color: transparent;
+}
+
+#input {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+}
+
+#input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+#inner-box {
+    margin: 0px;
+    border: none;
+    background-color: @base;
+}
+
+#outer-box {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    transition: 1s ease-in-out;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 2px;
+    border: none;
+    color: @lavender;
+}
+
+#text:selected {
+    font-weight: bold;
+    color: @base;
+}
+
+#entry:selected {
+    outline: none;
+    background-color: @lavender;
+}
+
+#entry {
+    margin-right: 0px;
+    margin-left: 0px;
+    border-width: 0px;
+    border-radius: 0px;
+    padding-left: 20px;
+    background-color: @base;
+}
