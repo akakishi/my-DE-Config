@@ -48,12 +48,21 @@ for items in sinks:
     idx += 1
     if items['sink_name'].endswith(" - Default"):
         default_pos = idx
-        output += f"=> {items['sink_name']}"
+        output += f"=> {items['sink_name'].replace(" - Default", "")}"
     else:
         output += f"{items['sink_name']}"
 
 # Call wofi and show the list. take the selected sink name and set it as the default sink
-wofi_command = f"echo '{output}' | wofi --show=dmenu --hide-scroll --allow-markup --define=hide_search=true --define=dynamic_lines=true --location=top_right --width=700 --height=150 --xoffset=-60 -s ~/.config/wofi/style-no-search.css"
+wofi_command = f"""echo '{output}' | wofi \\
+    --lines 8 \\
+    --columns 1 \\
+    --show=dmenu \\
+    --hide-scroll \\
+    --allow-markup \\
+    --define=hide_search=true \\
+    --define=dynamic_lines=true \\
+    --width=700 \\
+    -s ~/.config/wofi/style-no-search.css"""
 wofi_process = subprocess.run(wofi_command, shell=True, encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 #rofi_command = f"echo '{output}' | rofi -dmenu -m -1 -theme $HOME/.config/rofi/config/sinkmenu.rasi -selected-row {default_pos}"

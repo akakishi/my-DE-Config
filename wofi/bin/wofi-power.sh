@@ -17,10 +17,9 @@ selected=$(echo -e $entries | wofi \
     --hide-scroll \
     --define=hide_search=true \
     --define=prompt=Search \
-    --location=top_right \
-    --xoffset=-20 \
     --allow_markup \
     --cache-file /dev/null \
+    -s ~/.config/wofi/style-no-search.css \
     | awk '{print tolower($1)}')
 
 case $selected in
@@ -29,7 +28,7 @@ case $selected in
     logout)
         hyprctl dispatch exit;;
     lock)
-        swaylock -f;;
+        hyprlock;;
     suspend)
         systemctl suspend;;
     reboot)

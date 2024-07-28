@@ -1,5 +1,10 @@
 return {
-    "vim-airline/vim-airline",
+    {
+        "nvim-lualine/lualine.nvim",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons"
+        }
+    },
 	"nvim-treesitter/playground",
 	"theprimeagen/vim-be-good",
 	{
@@ -27,4 +32,9 @@ return {
     "eandrju/cellular-automaton.nvim",
     "prichrd/netrw.nvim",
     "nvim-tree/nvim-web-devicons",
+    {
+        "catppuccin/nvim",
+        name = "catppuccin",
+        priority = 1000
+    }
 }
