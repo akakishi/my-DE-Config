@@ -47,9 +47,8 @@
 - leader-ps: search Grep
 - help tags: leader-vh
 
-## Undetree
+## Undotree
 
 (n)
 - toggle: leader-u
-
 

@@ -73,7 +73,6 @@ window {
 #text:selected {
     font-weight: bold;
     color: @surface0;
-    font-size: 20px;
 }
 
 #entry:selected {

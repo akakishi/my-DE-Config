@@ -2,8 +2,9 @@ lastupdatecheck: 0
 recentrepos:
     - /home/ramirods/.config/my-shared-config
 startuppopupversion: 5
-lastversion: 0.43.1
+lastversion: 0.44.0
 customcommandshistory:
+    - add *
     - q
 hidecommandlog: true
 ignorewhitespaceindiffview: false

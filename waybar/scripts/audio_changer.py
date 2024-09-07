@@ -63,12 +63,17 @@ wofi_command = f"""echo '{output}' | wofi \\
     --define=dynamic_lines=true \\
     --width=700 \\
     -s ~/.config/wofi/style-no-search.css"""
-wofi_process = subprocess.run(wofi_command, shell=True, encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+#wofi_process = subprocess.run(wofi_command, shell=True, encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-#rofi_command = f"echo '{output}' | rofi -dmenu -m -1 -theme $HOME/.config/rofi/config/sinkmenu.rasi -selected-row {default_pos}"
-#rofi_process = subprocess.run(rofi_command, shell=True, encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+rofi_command = f"""echo '{output}' | rofi \\
+    -dmenu \\
+    -m \\
+    -1 \\
+    -theme $HOME/.config/rofi/config/sinkmenu.rasi \\
+    -selected-row {default_pos}"""
+rofi_process = subprocess.run(rofi_command, shell=True, encoding='utf-8', stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
-if wofi_process.returncode != 0:
+if rofi_process.returncode != 0:
     print("User cancelled the operation.")
     exit(0)
 
