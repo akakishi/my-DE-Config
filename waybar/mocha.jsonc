@@ -271,7 +271,7 @@
     },
 
     "custom/media": {
-        "format": "{icon} {}",
+        "format": "{icon} {0}",
         "return-type": "json",
         "max-length": 25,
         "format-icons": {
@@ -280,7 +280,7 @@
         },
         "escape": true,
         // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        "exec": "/usr/bin/python3 $HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name
+        "exec": "python3 $HOME/.config/waybar/scripts/mediaplayer.py --player spotify 2> /dev/null", // Filter player based on name
         "on-click": "sleep 0.1 && playerctl --player=spotify play-pause",
         "on-scroll-up": "sleep 0.1 && playerctl --player=spotify next",
         "on-scroll-down": "sleep 0.1 && playerctl --player=spotify previous"
@@ -288,7 +288,7 @@
 
     "custom/notification": {
         "tooltip": false,
-        "format": "{icon} {}",
+        "format": "{icon} {0}",
         "format-icons": {
             "notification": "󰂚",
             "none": "󰂜",
